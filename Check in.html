@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Favicon -->
+<link rel="icon" type="image/jpg" href="Logo.jpg">
+
+<!-- Open Graph Meta Tags for Link Preview -->
+<meta property="og:title" content="Emmy E Photography | Abuja's Premier Photography Studio 🇳🇬">
+<meta property="og:description" content="Professional photography services in Abuja, Nigeria. Weddings, Portraits, Events & Commercial Photography">
+<meta property="og:image" content="Logo.jpg">
+<meta property="og:type" content="website">
+
+<title>Emmy E Photography | Abuja's Premier Photography Studio 🇳🇬</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#f5f5dc;
+  --accent:#c9a961;
+  --dark:#1a1a1a;
+  --nigeria-green:#c9a961;
+  --nigeria-white:#ffffff;
+  --nigeria-red:#d4af37;
+  --dark-accent:#8b7355;
+  --light-gray:#e8e8e8;
+}
+
+*{ box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1a2e 50%, #0a0e27 100%);
+  margin:0;
+  color:#fff;
+  overflow-x: hidden;
+}
+
+/* NAVIGATION */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10, 14, 39, 0.95);
+  backdrop-filter: blur(15px);
+  border-bottom: 2px solid var(--nigeria-green);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .studio-info {
+  font-size: 14px;
+  color: #aaa;
+}
+
+nav .studio-info strong {
+  color: var(--nigeria-green);
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 80px 32px;
+  background: linear-gradient(135deg, rgba(201,169,97,0.1) 0%, rgba(212,175,55,0.08) 100%);
+  border-bottom: 3px solid var(--nigeria-green);
+  animation: fadeIn 0.8s ease-out;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.studio-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, var(--nigeria-green), #d4af37, var(--nigeria-red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 2px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: #d4af37;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.hero-tagline {
+  font-size: 16px;
+  color: #b0b0b0;
+  margin-bottom: 8px;
+}
+
+.location-badge {
+  display: inline-block;
+  background: rgba(201,169,97,0.2);
+  border: 1px solid var(--nigeria-green);
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 13px;
+  color: #d4af37;
+  margin-top: 16px;
+}
+
+/* MAIN CONTAINER */
+.main-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* GALLERY SECTION */
+.gallery {
+  padding: 60px 32px;
+  background: rgba(0,0,0,0.3);
+}
+
+.section-title {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #f5f5dc;
+}
+
+.section-title span {
+  color: var(--nigeria-green);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.gallery-item {
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, rgba(201,169,97,0.2), rgba(212,175,55,0.2));
+  border: 2px solid var(--nigeria-green);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(201,169,97,0.3);
+  border-color: var(--nigeria-red);
+}
+
+.gallery-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  background: rgba(201,169,97,0.1);
+  transition: 0.3s ease;
+}
+
+.gallery-item:hover .gallery-placeholder {
+  background: rgba(212,175,55,0.15);
+  transform: scale(1.1);
+}
+
+/* PRICING SECTION */
+.pricing {
+  padding: 60px 32px;
+  background: linear-gradient(135deg, rgba(212,175,55,0.05), rgba(201,169,97,0.05));
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.price-card {
+  background: rgba(255,255,255,0.08);
+  border: 2px solid var(--nigeria-green);
+  border-radius: 15px;
+  padding: 32px;
+  text-align: center;
+  transition: 0.3s ease;
+  animation: slideUp 0.6s ease-out both;
+}
+
+.price-card:nth-child(2) { animation-delay: 0.2s; }
+.price-card:nth-child(3) { animation-delay: 0.4s; }
+
+.price-card:hover {
+  background: rgba(201,169,97,0.15);
+  border-color: var(--nigeria-red);
+  transform: translateY(-8px);
+}
+
+.price-card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: var(--nigeria-red);
+}
+
+.price-card .amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--nigeria-green);
+  margin-bottom: 16px;
+}
+
+.price-card .currency {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.price-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: left;
+  font-size: 14px;
+}
+
+.price-card li {
+  padding: 8px 0;
+  color: #d4d4d4;
+  border-bottom: 1px solid rgba(201,169,97,0.2);
+}
+
+.price-card li:before {
+  content: "✓ ";
+  color: var(--nigeria-green);
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* TEAM SECTION */
+.team {
+  padding: 60px 32px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+}
+
+.team-member {
+  text-align: center;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.member-avatar {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--nigeria-green), var(--nigeria-red));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  border: 3px solid var(--nigeria-green);
+  transition: 0.3s ease;
+}
+
+.team-member:hover .member-avatar {
+  transform: scale(1.1);
+  border-color: var(--nigeria-red);
+  box-shadow: 0 8px 25px rgba(201,169,97,0.4);
+}
+
+.team-member h3 {
+  font-size: 18px;
+  margin: 12px 0 4px 0;
+  color: #f5f5dc;
+}
+
+.team-member p {
+  font-size: 13px;
+  color: var(--nigeria-green);
+  margin: 0;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 60px 32px;
+  background: rgba(201,169,97,0.05);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.testimonial {
+  background: rgba(255,255,255,0.08);
+  border-left: 4px solid var(--nigeria-green);
+  padding: 24px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.testimonial:hover {
+  background: rgba(201,169,97,0.15);
+  transform: translateX(8px);
+}
+
+.testimonial-text {
+  font-size: 14px;
+  color: #d4d4d4;
+  font-style: italic;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  font-size: 13px;
+  color: var(--nigeria-green);
+  font-weight: 600;
+}
+
+.stars {
+  color: var(--nigeria-red);
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+/* ATTENDANCE FORM */
+.attendance-section {
+  padding: 60px 32px;
+  background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(201,169,97,0.08));
+}
+
+.form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-container {
+  width:100%;
+  padding:40px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  border: 2px solid var(--nigeria-green);
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity:0; transform:translateY(20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+.header-section {
+  text-align:center;
+  margin-bottom:32px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--nigeria-green);
+}
+
+.logo {
+  font-family:'Playfair Display', serif;
+  font-size:40px;
+  font-weight:700;
+  margin-bottom:8px;
+  background: linear-gradient(135deg, var(--nigeria-green), #d4af37, var(--nigeria-red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 2px;
+}
+
+h2{
+  text-align:center;
+  font-family:'Playfair Display', serif;
+  font-weight:600;
+  font-size:26px;
+  margin-bottom:8px;
+  color:#f5f5dc;
+}
+
+.tagline {
+  text-align:center;
+  font-size:13px;
+  color:#d4af37;
+  margin-bottom:0;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.info-box{
+  background: rgba(201,169,97,0.12);
+  padding:18px;
+  border-radius:12px;
+  font-size:13px;
+  color:#d4d4d4;
+  margin-bottom:24px;
+  line-height:1.7;
+  border-left: 4px solid var(--nigeria-green);
+}
+
+label{
+  display:block;
+  margin-top:18px;
+  font-size:13px;
+  color:var(--nigeria-green);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+input, select{
+  width:100%;
+  padding:14px 16px;
+  margin-top:8px;
+  border-radius:10px;
+  border: 2px solid var(--nigeria-green);
+  background:rgba(0,0,0,0.4);
+  color:#fff;
+  font-size:15px;
+  outline:none;
+  font-family: 'Inter', sans-serif;
+  transition: 0.3s ease;
+}
+
+input:focus, select:focus{
+  box-shadow:0 0 15px rgba(201,169,97,0.4);
+  border-color: var(--nigeria-red);
+  background:rgba(0,0,0,0.6);
+}
+
+select{ 
+  appearance:none; 
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c9a961' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px;
+  padding-right: 40px;
+}
+
+button{
+  width:100%;
+  padding:16px;
+  margin-top:28px;
+  border-radius:10px;
+  border:none;
+  font-weight:600;
+  font-size:15px;
+  background:linear-gradient(135deg, var(--nigeria-green), #d4af37);
+  color:#1a1a1a;
+  cursor:pointer;
+  transition: 0.3s ease;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+button:hover{
+  transform:translateY(-2px);
+  box-shadow: 0 8px 25px rgba(201,169,97,0.4);
+  background:linear-gradient(135deg, var(--nigeria-red), #c9a961);
+}
+
+button:active{ 
+  transform:scale(0.98);
+}
+
+.camera-icon{
+  margin:16px auto 16px;
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  background:rgba(201,169,97,0.15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  border: 2px solid var(--nigeria-green);
+  transition: 0.3s ease;
+}
+
+.camera-icon:hover {
+  background:rgba(201,169,97,0.25);
+  border-color: var(--nigeria-red);
+  transform: scale(1.1);
+}
+
+.camera-icon svg{
+  width:48px;
+  filter: drop-shadow(0 0 4px rgba(201,169,97,0.6));
+}
+
+.status{
+  text-align:center;
+  font-size:12px;
+  color:#d4af37;
+  min-height:16px;
+  margin-top: 8px;
+}
+
+.success-screen{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.95);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.success-content {
+  text-align: center;
+}
+
+.success-content h2 {
+  font-size: 28px;
+  margin: 16px 0 8px 0;
+}
+
+.success-content p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+  background: rgba(0,0,0,0.6);
+  border-top: 2px solid var(--nigeria-green);
+  padding: 40px 32px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.footer-section h3 {
+  color: var(--nigeria-green);
+  margin-bottom: 12px;
+}
+
+.footer-section p, .footer-section a {
+  font-size: 13px;
+  color: #aaa;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.footer-section a:hover {
+  color: var(--nigeria-red);
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(201,169,97,0.2);
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  background: var(--nigeria-green);
+  color: #1a1a1a;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--nigeria-green);
+  padding-top: 20px;
+  font-size: 12px;
+  color: #666;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+  nav {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+  
+  .hero {
+    padding: 50px 20px;
+  }
+  
+  .studio-name {
+    font-size: 36px;
+  }
+  
+  .section-title {
+    font-size: 26px;
+  }
+  
+  .form-container {
+    padding: 28px;
+  }
+  
+  .logo {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px){
+  .hero {
+    padding: 40px 16px;
+  }
+  
+  .studio-name {
+    font-size: 28px;
+  }
+  
+  .hero-subtitle {
+    font-size: 16px;
+  }
+  
+  .section-title {
+    font-size: 22px;
+  }
+  
+  .form-container {
+    padding: 20px;
+  }
+  
+  .gallery-grid, .pricing-grid, .team-grid, .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  input, select {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 14px;
+    font-size: 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <img src="Logo.jpg" alt="Emmy E Photography" style="height: 40px; width: 40px; border-radius: 50%; object-fit: cover;">
+    <div class="studio-info">
+      <strong>Emmy E Photography</strong> | Abuja, Nigeria 🇳🇬
+    </div>
+  </div>
+  <div class="studio-info">
+    📞 Staff Attendance Portal
+  </div>
+</nav>
+
+<!-- BRANDING HEADER -->
+<div style="text-align: center; padding: 40px 20px; background: rgba(201,169,97,0.08);">
+  <img src="Logo.jpg" alt="Emmy E Photography" style="height: 120px; width: 120px; border-radius: 15px; margin-bottom: 16px; box-shadow: 0 8px 25px rgba(201,169,97,0.3); border: 2px solid var(--nigeria-green);">
+  <h1 style="font-family: 'Playfair Display', serif; font-size: 42px; margin: 12px 0 4px 0; color: var(--nigeria-green); font-weight: 700; letter-spacing: 2px;">Emmy E Photography</h1>
+  <p style="font-size: 16px; color: #d4af37; margin: 0; font-weight: 600; letter-spacing: 1px;">PREMIUM PHOTOGRAPHY SERVICES | ABUJA, NIGERIA 🇳🇬</p>
+</div>
+
+<!-- STAFF ATTENDANCE SECTION -->
+<div class="attendance-section">
+  <div class="main-wrapper">
+    <div class="form-wrapper">
+      <div class="form-container">
+
+        <div class="header-section">
+          <img src="Logo.jpg" alt="Emmy E Photography" style="height: 100px; width: 100px; border-radius: 12px; margin-bottom: 12px; box-shadow: 0 4px 15px rgba(201,169,97,0.3);">
+          <h2>Staff Portal</h2>
+          <p class="tagline">Check-In/Out System</p>
+        </div>
+
+        <!-- INFO BOX -->
+        <div class="info-box">
+          <strong>📋 Attendance Rules:</strong><br>
+          Late coming: &lt;1hr = ₦1,000 | 1-3hrs = ₦2,000 | 3hrs+ = Absent<br>
+          Early closure: &lt;1hr = ₦1,000 | 1-3hrs = ₦2,000 | 3hrs+ = Absent<br>
+          Absent: ₦5,000 deduction<br>
+          Daily attendance required for accurate salary calculation.
+        </div>
+
+        <div class="clock" id="liveClock"></div>
+
+        <!-- Fingerprint -->
+        <div class="camera-icon" id="finger">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 3a6 6 0 0 0-6 6c0 6 6 10 6 12 0-2 6-6 6-12a6 6 0 0 0-6-6z"/>
+            <path d="M9 9a3 3 0 1 1 6 0c0 3-3 5-3 7 0-2-3-4-3-7z"/>
+          </svg>
+        </div>
+
+        <div class="status" id="status">Tap fingerprint to enable</div>
+
+        <!-- FORM -->
+        <form id="form">
+          <label>Employee Name</label>
+          <input type="text" name="name" required>
+
+          <label>Date</label>
+          <input type="date" id="date" name="date" required>
+
+          <label>Select Action</label>
+          <select id="action" name="action">
+            <option value="resumption">Resumption (Check-In)</option>
+            <option value="closing">Closing (Check-Out)</option>
+          </select>
+
+          <label>Confirmation Key</label>
+          <input type="password" name="confirmation_Code" placeholder="Enter code (Ask me for the code)  " required>
+
+          <label>Time</label>
+          <input type="time" id="time" name="time" required>
+
+          <button type="submit">✔ Submit Attendance</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</footer>
+
+<script>
+const FORM_ENDPOINT = "https://formspree.io/f/xojpgaak";
+const beep = new Audio('data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAIlYAAESsAAACABAAZGF0YQAAAAA=');
+
+// ===== ATTENDANCE SYSTEM =====
+
+// Set default date and update clock
+document.getElementById('date').valueAsDate = new Date();
+setInterval(()=>{ 
+  document.getElementById('liveClock').innerText = new Date().toLocaleString('en-NG', { timeZone: 'Africa/Lagos' }); 
+}, 1000);
+
+// Auto-fill time on load
+window.onload = ()=>{ 
+  document.getElementById('time').value = new Date().toTimeString().slice(0,5); 
+};
+
+// Fingerprint enable
+let enabled = false;
+document.getElementById('finger').onclick = ()=>{
+  enabled = true;
+  document.getElementById('status').innerText = '✔ Biometric ready | Proceed with submission';
+  setTimeout(() => {
+    document.getElementById('status').innerText = '';
+  }, 3000);
+};
+
+// Success notification
+function showSuccess(action){
+  const screen = document.createElement('div');
+  screen.className = "success-screen";
+  screen.innerHTML = `
+    <div class="success-content">
+      <div style="font-size:72px;color:var(--nigeria-green);">✔</div>
+      <h2>${action === 'resumption' ? '🟢 Check-In Successful' : '🔴 Check-Out Successful'}</h2>
+      <p style="color:#aaa;font-size:16px;margin-top:12px;">Attendance recorded in system</p>
+      <p style="color:#666;font-size:12px;margin-top:20px;">Time: ${new Date().toLocaleString('en-NG', { timeZone: 'Africa/Lagos' })}</p>
+    </div>
+  `;
+  document.body.appendChild(screen);
+  setTimeout(()=> screen.remove(), 2500);
+}
+
+// Form submission
+const form = document.getElementById('form');
+form.addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  
+  if(!enabled){ 
+    alert('⚠️ Please tap the fingerprint icon first to enable submission');
+    return; 
+  }
+  
+  beep.play();
+
+  const formData = new FormData(form);
+  try {
+    const response = await fetch(FORM_ENDPOINT, {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: formData
+    });
+    
+    if(response.ok){
+      const actionType = document.getElementById('action').value;
+      showSuccess(actionType);
+      form.reset();
+      document.getElementById('date').valueAsDate = new Date();
+      enabled = false;
+      document.getElementById('status').innerText = 'Tap fingerprint to enable';
+    } else { 
+      alert("❌ Submission failed. Please try again or contact admin.");
+    }
+  } catch (err) { 
+    alert("❌ Error submitting attendance. Check your internet connection.");
+  }
+});
+</script>
+
+</body>
+</html>
